@@ -11,16 +11,20 @@
     --VeryDarkBlue: hsl(233, 12%, 13%);
     --VeryPaleRed: hsl(13, 100%, 96%);
     --VaryLightGray: hsl(0, 0%, 98%);
+    --lightergraycolor: hsl(0, 0%, 98%);
 }
-a, button{
+body{
+    background-image: url(/images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: top -210px right -190px;
+}
+a, #submitButton{
     cursor: pointer;
 }
 nav{
     display: flex;
     justify-content: space-around;
     margin-top: 2rem;
-}
-nav img{
     align-items: center;
 }
 nav ul{
@@ -33,84 +37,99 @@ nav ul a{
     text-decoration: none;
     color: var(--VeryDarkBlue);
     cursor: pointer;
+    font-size: 14px;
+}
+nav ul a:hover{
+    color: var(--DarkGrayishBlue);
 }
 button{
     all: unset;
-    padding: 8px 23px;
+    padding: 15px 37px;
+    font-size: 13px;
     border-radius: 50px;
     background-color: var(--BrightRed);
     color: var(--VaryLightGray);
+    box-shadow: 5px 3px 10px var(--BrightRed);
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--DarkGrayishBlue)
 }
 main{
     display: flex;
     align-items: center;
     gap: 17rem;
-    padding: 2rem 0 5rem 9rem;
+    padding: 6rem 7rem 5rem 9rem;
 }
 #main_text{
-    width: 27%;
-    /* padding-right: 2rem; */
+    width: 35%;
 }
 #main_text h1{
-    font-size: 45px;
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--DarkBlue);
 }
 #main_text p{
     font-size: 17px;
     line-height: 1.5;
     margin: 2rem 0;
+    color: var(--DarkGrayishBlue);
 }
 main img{
     width: 50%;
 }
 section{
     display: flex;
-    gap: 17rem;
-    padding: 2rem 0 5rem 9rem;
+    gap: 6rem;
+    padding: 1rem 0 5rem 9rem;
 }
 #first-section{
-    width: 30%;
+    width: 38%;
 }
 #first-section h1{
-    font-size: 32px;
+    font-size: 40px;
+    font-weight: 700;
     color: var(--DarkBlue);
 }
 #first-section p{
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.5;
     margin-top: 2rem;
+    color: var(--DarkGrayishBlue);
 }
 #sub-sections{
-    width: 36%;
+    width: 40%;
 }
 .subsec1, .subsec2, .subsec3{
     display: flex;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
-.subsec1 h3, .subsec2 h3, .subsec3 h3{
+.subsec1 h4, .subsec2 h4, .subsec3 h4{
     border: 1px solid var(--BrightRed);
     border-radius: 40px;
     background-color: var(--BrightRed);
     height: 10%;
-    padding: 4px 15px;
+    padding: 9px 19px;
+    color: var(--VaryLightGray);
+    font-weight: 400;
 }
 .subsec1 p, .subsec2 p, .subsec3 p{
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 17px;
+    color: var(--DarkGrayishBlue);
 }
-.subsec1 h1, .subsec2 h1, .subsec3 h1{
+.subsec1 h3, .subsec2 h3, .subsec3 h3{
     padding-bottom: 1rem;
     font-size: 18px;
     color: var(--DarkBlue);
 }
-article{
-    /* padding: 2rem 4rem 5rem 7rem; */
-}
 article h1{
-    margin: 5rem 0;
+    margin: 4rem 0 7rem 0;
     position: relative;
-    left: 39rem;
-    font-size:30px;
+    left: 37rem;
+    font-size:40px;
+    font-weight: 700;
 }
 .testimonials{
     display: grid;
@@ -121,6 +140,7 @@ article h1{
     text-align: center;
     font-size: 15px;
     padding: 1rem 0;
+    color: var(--DarkGrayishBlue);
 }
 .testimonials h2{
     text-align: center;
@@ -147,17 +167,66 @@ article button{
 #lower-section{
     background-color: var(--BrightRed);
     display: flex;
-    gap: 37rem;
+    gap: 29rem;
     padding: 3rem 0 3rem 9rem;
     align-items: center;
 }
 #lower-section h1{
-    width:36%;
     color: var(--VaryLightGray);
-    font-size: 35px;
+    font-size: 41px;
+    width: 45%;
 }
 #lower-section button{
     background-color: var(--VaryLightGray);
     color: var(--BrightRed);
-    /* align-items: center; */
+}
+footer{
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    gap: 18rem;
+    padding: 2rem 0 5rem 0;
+}
+.left-footer{
+    padding: 1.5rem 0 0 9rem;
+}
+.left-footer img{
+    margin-bottom: 3rem;
+}
+.icons a i{
+    color: white;
+    font-size: 24px;
+    border-radius: 50px;
+    margin: 3px;
+}
+.icons a i:hover{
+    color: var(--BrightRed);
+}
+.middle-footer{
+    display: flex;
+    gap: 10rem;
+}
+.lastList1 a, .lastList2 a{
+    display: block;
+    list-style-type: none;
+    text-decoration: none;
+    margin-top: 22px;
+    color: var(--VaryLightGray);
+    font-size: 14px;
+}
+.lastList1 a:hover, .lastList2 a:hover{
+    color: var(--BrightRed);
+}
+#email{
+    border-radius: 20px;
+    padding: 11px;
+}
+#submitButton{
+    background-color: var(--BrightRed);
+    padding: 12px 25px;
+    border-radius: 35px;
+}
+.copyright{
+    color: var(--VaryLightGray);
+    font-size: 12px;
+    margin-top: 4rem;
 }
