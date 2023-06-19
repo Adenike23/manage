@@ -41,25 +41,25 @@
         </div>
         <div id="sub-sections">
             <div class="subsec1">
-                <h4>01</h4>
-            <div>
-                <h3>Track company-wide progress</h3>
+                    <div class="aa">
+                        <h4>01</h4>
+                        <h3>Track company-wide progress</h3>
+                    </div>
                 <p>See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.</p>
             </div>
-            </div>
             <div class="subsec2">
-                <h4>02</h4>
-            <div>
-                <h3>Advanced built-in reports</h3>
+                <div class="aa">
+                    <h4>02</h4>
+                    <h3>Advanced built-in reports</h3>
+                </div>
                 <p>Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.</p>
             </div>
-            </div>
             <div class="subsec3">
-                <h4>03</h4>
-            <div>
-                <h3>Everything you need in one place </h3>
+                <div class="aa">
+                    <h4>03</h4>
+                    <h3>Everything you need in one place </h3>
+                </div>
                 <p>Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.</p>
-            </div>
             </div>
         </div>
     </section>
@@ -123,31 +123,28 @@
             <div class="copyright">Copyright 2020. All Rights Reserved</div>
         </div>
     </footer>
+    <script src="/js/main.js"></script>
     <script>
-        // code for what happens when the menu button is clicked
         const openNav = document.querySelector(".open-menu");
-        const closeNav = document.querySelector(".close-menu");
-        const navList = document.querySelector("nav ul");
-        openNav.addEventListener("click", function() {
-            openNav.style.display = "none"
-            closeNav.style.display = "block";
-            navList.style.top = "4%"
-        })
-        // code for what hapens when the closeMenu button is clicked
-        closeNav.addEventListener("click", function() {
-            openNav.style.display = "block"
-            closeNav.style.display = "none";
-            navList.style.top = "-4%"
-        })
-        // code for what happens when any of the nav ul links is clicked. the nav ul disappears
-        document.querySelectorAll("nav ul a").forEach(navLink => {
-            navLink.addEventListener("click", function() {
-                closeNav.style.display = "none";
-                openNav.style.display = "block"
-                navList.style.top = "-4%";
-    
-            })
-        })
+    const closeNav = document.querySelector(".close-menu");
+    const navList = document.querySelector("nav ul");
+    openNav.addEventListener("click", function() {
+    navList.style.top = "5%"
+    openNav.style.display = "none"
+    closeNav.style.display = "block"
+})
+closeNav.addEventListener("click", function() {
+    navList.style.top = "-5%"
+    openNav.style.display = "block"
+    closeNav.style.display = "none"
+})
+document.querySelectorAll("nav ul a").forEach(navLink => {
+    navLink.addEventListener("click", function() {
+        navList.style.top = "-5%"
+        openNav.style.display = "block"
+        closeNav.style.display = "none"
+    })
+})
     </script>
 </body>
 </html>
