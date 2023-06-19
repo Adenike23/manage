@@ -13,16 +13,20 @@
 <body>
     <nav>
         <img src="/images/logo.svg" alt="">
+        <div class="menu">
+            <img src="/icons/icon-hamburger.svg" alt="" class="open-menu">
+            <img src="/icons/icon-close.svg" alt="" class="close-menu">
+        </div>
         <ul>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Community</a></li>
+            <li><a href="#main">Pricing</a></li>
+            <li><a href="#section">Product</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#lower-section">Community</a></li>
         </ul>
         <button>Get Started</button>
     </nav>
-    <main>
+    <main id="main">
         <div id="main_text">
             <h1>Bring everyone together to build better products.</h1>
             <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</p>
@@ -30,7 +34,7 @@
         </div>
         <img src="/images/illustration-intro.svg" alt="">
     </main>
-    <section>
+    <section id="section">
         <div id="first-section">
             <h1>What’s different about Manage?</h1>
             <p>Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.</p>
@@ -59,25 +63,25 @@
             </div>
         </div>
     </section>
-    <article>
+    <article id="careers">
         <h1>What they've said</h1>
         <div class="testimonials">
-            <div class="a">
+            <div class="Anisha">
                 <img src="/images/avatar-anisha.png" alt="">
                 <h2>Anisha Li</h2>
                 <p>“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
             </div>
-            <div class="b">
+            <div class="Ali">
                 <img src="/images/avatar-ali.png" alt="">
                 <h2>Ali Bravo</h2>
                 <p>“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”</p>
             </div>
-            <div class="c">
+            <div class="Richard">
                 <img src="/images/avatar-richard.png" alt="">
                 <h2> Richard Watts</h2>
                 <p>“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”</p>
             </div>
-            <div class="d">
+            <div class="Shanai">
                 <img src="/images/avatar-shanai.png" alt="">
                 <h2> Shanai Gough</h2>
                 <p>“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
@@ -89,7 +93,7 @@
         <h1>Simplify how your team works today.</h1>
         <button>Get Started</button>
     </div>
-    <footer>
+    <footer id="aboutUs">
         <div class="left-footer">
             <img src="/images/logo.svg" alt="">
             <div class="icons">
@@ -119,5 +123,31 @@
             <div class="copyright">Copyright 2020. All Rights Reserved</div>
         </div>
     </footer>
+    <script>
+        // code for what happens when the menu button is clicked
+        const openNav = document.querySelector(".open-menu");
+        const closeNav = document.querySelector(".close-menu");
+        const navList = document.querySelector("nav ul");
+        openNav.addEventListener("click", function() {
+            openNav.style.display = "none"
+            closeNav.style.display = "block";
+            navList.style.top = "4%"
+        })
+        // code for what hapens when the closeMenu button is clicked
+        closeNav.addEventListener("click", function() {
+            openNav.style.display = "block"
+            closeNav.style.display = "none";
+            navList.style.top = "-4%"
+        })
+        // code for what happens when any of the nav ul links is clicked. the nav ul disappears
+        document.querySelectorAll("nav ul a").forEach(navLink => {
+            navLink.addEventListener("click", function() {
+                closeNav.style.display = "none";
+                openNav.style.display = "block"
+                navList.style.top = "-4%";
+    
+            })
+        })
+    </script>
 </body>
 </html>

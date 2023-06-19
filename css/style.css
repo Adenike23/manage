@@ -13,6 +13,12 @@
     --VaryLightGray: hsl(0, 0%, 98%);
     --lightergraycolor: hsl(0, 0%, 98%);
 }
+html, body{
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    scroll-behavior: smooth;
+}
 body{
     background-image: url(/images/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
@@ -26,6 +32,9 @@ nav{
     justify-content: space-around;
     margin-top: 2rem;
     align-items: center;
+}
+.menu{
+    display: none;
 }
 nav ul{
     display: flex;
@@ -42,6 +51,9 @@ nav ul a{
 nav ul a:hover{
     color: var(--DarkGrayishBlue);
 }
+.menu-tags{
+    display: none;
+}
 button{
     all: unset;
     padding: 15px 37px;
@@ -49,7 +61,7 @@ button{
     border-radius: 50px;
     background-color: var(--BrightRed);
     color: var(--VaryLightGray);
-    box-shadow: 5px 3px 10px var(--BrightRed);
+    box-shadow: 3px 3px 10px var(--BrightRed);
     cursor: pointer;
 }
 button:hover{
@@ -58,21 +70,21 @@ button:hover{
 main{
     display: flex;
     align-items: center;
-    gap: 17rem;
-    padding: 6rem 7rem 5rem 9rem;
+    justify-content: space-between;
+    padding: 6rem 7rem 5rem 7rem;
 }
 #main_text{
-    width: 35%;
+    width: 40%;
 }
 #main_text h1{
     font-size: 50px;
-    font-weight: 700;
+    font-weight: 900;
     color: var(--DarkBlue);
 }
 #main_text p{
     font-size: 17px;
     line-height: 1.5;
-    margin: 2rem 0;
+    margin: 1rem 0 3rem 0;
     color: var(--DarkGrayishBlue);
 }
 main img{
@@ -80,8 +92,8 @@ main img{
 }
 section{
     display: flex;
-    gap: 6rem;
-    padding: 1rem 0 5rem 9rem;
+    justify-content: space-between;
+    padding: 2rem 7rem 5rem 7rem;
 }
 #first-section{
     width: 38%;
@@ -98,12 +110,16 @@ section{
     color: var(--DarkGrayishBlue);
 }
 #sub-sections{
-    width: 40%;
+    width: 45%;
 }
 .subsec1, .subsec2, .subsec3{
     display: flex;
     gap: 2rem;
     margin-bottom: 3rem;
+}
+#sub-sections h3{
+    font-size: 17px;
+    font-weight: 800;
 }
 .subsec1 h4, .subsec2 h4, .subsec3 h4{
     border: 1px solid var(--BrightRed);
@@ -126,15 +142,15 @@ section{
 }
 article h1{
     margin: 4rem 0 7rem 0;
-    position: relative;
-    left: 37rem;
     font-size:40px;
     font-weight: 700;
+    text-align: center;
 }
 .testimonials{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
+    margin: 0 1rem;
 }
 .testimonials p{
     text-align: center;
@@ -153,22 +169,24 @@ article h1{
     top: -45px;
     left: 110px;
 }
-.a, .b, .c, .d{
+.Anisha, .Ali, .Richard, .Shanai{
     border: 1px solid var(--VaryLightGray);
     background-color: var(--VeryPaleRed);
     padding: 0 2rem;
 }
 article button{
-    margin: 5rem 0;
+    margin: 5rem 0 9rem 0;
+    cursor: pointer;
     position: relative;
-    left: 44rem;
-    cursor: pointer
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 #lower-section{
     background-color: var(--BrightRed);
     display: flex;
-    gap: 29rem;
-    padding: 3rem 0 3rem 9rem;
+    justify-content: space-between;
+    padding: 3rem 7rem;
     align-items: center;
 }
 #lower-section h1{
@@ -183,14 +201,17 @@ article button{
 footer{
     background-color: var(--VeryDarkBlue);
     display: flex;
-    gap: 18rem;
+    justify-content: space-around;
     padding: 2rem 0 5rem 0;
 }
 .left-footer{
-    padding: 1.5rem 0 0 9rem;
+    padding-top: 1.5rem;
 }
 .left-footer img{
     margin-bottom: 3rem;
+}
+.icons a{
+    text-decoration: none;
 }
 .icons a i{
     color: white;
@@ -203,7 +224,7 @@ footer{
 }
 .middle-footer{
     display: flex;
-    gap: 10rem;
+    gap: 7rem;
 }
 .lastList1 a, .lastList2 a{
     display: block;
@@ -211,7 +232,7 @@ footer{
     text-decoration: none;
     margin-top: 22px;
     color: var(--VaryLightGray);
-    font-size: 14px;
+    font-size: 15px;
 }
 .lastList1 a:hover, .lastList2 a:hover{
     color: var(--BrightRed);
@@ -219,14 +240,246 @@ footer{
 #email{
     border-radius: 20px;
     padding: 11px;
+    margin-top: 2rem;
 }
 #submitButton{
     background-color: var(--BrightRed);
     padding: 12px 25px;
     border-radius: 35px;
+    color: var(--VaryLightGray);
+    font-weight: 700;
 }
 .copyright{
     color: var(--VaryLightGray);
     font-size: 12px;
     margin-top: 4rem;
+}
+@media screen and (max-width: 992px) {
+    main{
+        padding: 6rem 4rem 5rem 4rem;
+    }
+    #main_text{
+        width: 50%;
+    }
+    #main_text h1{
+        font-size: 33px;
+        font-weight: 900;
+    }
+    section{
+        padding: 2rem 4rem 5rem 4rem;
+    }
+    #sub-sections{
+        width: 55%;
+    }
+    #first-section h1{
+        font-size: 36px;
+    }
+    #first-section p{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 768px) {
+    nav{
+        margin-top: 1rem;
+    }
+    nav img{
+        width: 18%;
+    }
+    nav ul{
+        gap: 12px;
+    }
+    nav ul a{
+        font-size: 13px;
+    }
+    nav button{
+        display: none;
+    }
+    button{
+        padding: 14px 23px;
+    }
+    main{
+        padding: 3rem 2rem 5rem 2rem;
+    }
+    #main_text{
+        width: 42%;
+    }
+    #main_text h1{
+        font-size: 26px;
+        font-weight: 800;
+    }
+    section{
+        padding: 2rem;
+    }
+    #first-section h1{
+        font-size: 30px;
+    }
+    #first-section p{
+        font-size: 16px;
+    }
+    #sub-sections{
+        width: 59%;
+    }
+    .subsec1 p, .subsec2 p, .subsec3 p{
+        font-size: 16px;
+    }
+    .testimonials{
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 4rem;
+        padding: 0 1rem;
+    }
+    #lower-section h1{
+        font-size: 25px;
+    }
+    #lower-section{
+        padding: 3rem 2rem;
+    }
+    footer{
+        padding: 2rem 0 3rem 0;
+    }
+    #email{
+        padding: 9px 5px;
+        margin-top: 1rem;
+    }
+    #submitButton{
+        padding: 9px 20px;
+    }
+    .middle-footer{
+        gap: 4rem;
+    }
+    .copyright{
+        font-size: 12px;
+        margin: 2rem 0 0 2rem;
+    }
+}
+@media screen and (max-width: 576px) {
+    /* code to change the nav ul at smaller screen sizes*/
+    nav ul{
+        flex-direction: column;
+        border: 1px solid var(--VaryLightGray);
+        width: 55%;
+        padding: 23px 0;
+        position: absolute;
+        top: -4%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--VaryLightGray);
+        border-radius: 8px;
+        z-index: 1;
+        transition: .7s;
+        box-shadow: 0 0 5px var(--DarkGrayishBlue);
+    }
+    nav ul a{
+        font-size: 12px;
+        font-weight: 600;
+    }
+    nav{
+        justify-content: space-between;
+    }
+    nav img{
+        width: 22%;
+        margin-left: 15px;
+    }
+    .menu{
+        display: block;
+        width: 15%;
+    }
+    .close-menu{
+        display: none;
+    }
+    main{
+        padding: 3rem 1rem 5rem 1rem;
+    }
+    #main_text h1{
+        font-size: 23px;
+    }
+    main img{
+        align-self: flex-start
+    }
+    section{
+        padding: 2rem 1rem;
+    }
+    #first-section{
+        margin-right: 2rem;
+    }
+    #first-section h1{
+        font-size: 21px;
+        font-weight: 800;
+    }
+    #first-section p{
+        font-size: 15px;
+    }
+    #first-section p{
+        font-size: 15px;
+    }
+    .subsec1, .subsec2, .subsec3{
+        gap: 1rem;
+    }
+    .subsec1 h4, .subsec2 h4, .subsec3 h4{
+        padding: 4px 8px;
+    }
+    .subsec1, .subsec2, .subsec3{
+        gap: 13px;
+    }
+    #sub-sections h3{
+        font-size: 16px;
+    }
+    article h1{
+        margin: 2rem 0 7rem 0;
+    }
+    .Anisha, .Ali, .Richard, .Shanai{
+        padding: 0 1rem;
+    }
+    .testimonials img{
+        width: 27%;
+        position: relative;
+        top: -30px;
+        left: 75px;
+    }
+    article button{
+        margin: 5rem 0;
+    }
+    #lower-section{
+        padding: 4rem 2rem;
+    }
+    #lower-section h1{
+        width: 50%;
+    }
+    footer{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .left-footer img{
+        margin-bottom: 0;
+        position: absolute;
+        bottom: 5rem;
+    }
+    .icons{
+        margin-top: 7rem;
+    }
+    .icons a i{
+        font-size: 26px;
+        margin: 7px;
+        position: relative;
+        bottom: 6rem;
+    }
+    .lastList1 a, .lastList2 a{
+        font-size: 17px;
+    }
+    .middle-footer{
+        gap: 9rem;
+        margin-top: 2rem;
+    }
+    #email{
+        padding: 14px 22px;
+    }
+    #submitButton{
+        padding: 15px 29px;
+        font-size: 15px;
+    }
+    .copyright{
+        position: absolute;
+        bottom: 1rem;
+        margin-top: 4rem;
+    }
 }
