@@ -94,6 +94,11 @@ section{
     display: flex;
     justify-content: space-between;
     padding: 2rem 7rem 5rem 7rem;
+    position: relative;
+    background-image: url(/images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position-x: -300px;
+    background-position-y: 200px;
 }
 #first-section{
     width: 40%;
@@ -146,6 +151,11 @@ section{
     font-size: 18px;
     color: var(--DarkBlue);
 }
+.bg-image{
+    position: absolute;
+    z-index: 999999;
+
+}
 article h1{
     margin: 4rem 0 7rem 0;
     font-size:40px;
@@ -155,8 +165,7 @@ article h1{
 .testimonials{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
-    margin: 0 1rem;
+    grid-gap: 2rem;
 }
 .testimonials p{
     text-align: center;
@@ -230,7 +239,7 @@ footer{
 }
 .middle-footer{
     display: flex;
-    gap: 7rem;
+    gap: 5rem;
 }
 .lastList1 a, .lastList2 a{
     display: block;
@@ -348,17 +357,20 @@ footer{
         padding: 3rem 2rem;
     }
     footer{
-        padding: 2rem 0 3rem 0;
+        padding: 2rem 1rem 3rem 1rem;
+    }
+    .lastList1 a, .lastList2 a{
+        font-size: 13px;
     }
     #email{
-        padding: 9px 5px;
+        padding: 0;
         margin-top: 1rem;
     }
     #submitButton{
-        padding: 9px 20px;
+        padding: 6px 14px;
     }
     .middle-footer{
-        gap: 4rem;
+        gap: 1.5rem;
     }
     .copyright{
         font-size: 12px;
