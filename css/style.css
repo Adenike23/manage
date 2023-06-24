@@ -95,10 +95,10 @@ section{
     justify-content: space-between;
     padding: 2rem 7rem 5rem 7rem;
     position: relative;
-    background-image: url(/images/bg-tablet-pattern.svg);
+    /* background-image: url(/images/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
     background-position-x: -300px;
-    background-position-y: 200px;
+    background-position-y: 200px; */
 }
 #first-section{
     width: 40%;
