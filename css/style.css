@@ -394,6 +394,10 @@ footer{
         transition: .7s;
         box-shadow: 0 0 5px var(--DarkGrayishBlue);
     }
+    body{
+        background-size: 550px;
+        background-position: top -170px right -230px;
+    }
     nav ul a{
         font-size: 12px;
         font-weight: 600;
